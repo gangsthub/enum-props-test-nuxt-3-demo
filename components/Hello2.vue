@@ -5,13 +5,12 @@
 </template>
 
 <script lang="ts">
-import type { Variant } from './Hello.types';
-type VariantProps = `${Variant}`;
+import type { VariantType } from './Hello.types';
 
 export default defineComponent({
   props: {
     variant: {
-      type: String as PropType<VariantProps>,
+      type: String as PropType<VariantType>,
       required: true,
     },
   },
