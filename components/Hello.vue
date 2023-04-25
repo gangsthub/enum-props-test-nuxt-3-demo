@@ -5,10 +5,14 @@
 </template>
 
 <script setup lang="ts">
-import type { Variant } from './Hello.types';
-type VariantProps = `${Variant}`;
+import { type VariantType, VariantEnum } from './Hello.types';
 
-defineProps<{
-  variant: VariantProps;
-}>();
+withDefaults(
+  defineProps<{
+    variant: VariantType;
+  }>(),
+  {
+    variant: VariantEnum.PRIMARY,
+  }
+);
 </script>
